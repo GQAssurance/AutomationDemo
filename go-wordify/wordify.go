@@ -29,7 +29,7 @@ func cleanInput(input string) decimal.Decimal {
 	input = strings.ReplaceAll(input, ",", "")
 	num, err := decimal.NewFromString(input)
 	if err != nil {
-		fmt.Println("Your argument must be a number!")
+		fmt.Println("Your input must be a number, with only periods, commas, and dollar signs allowed!")
 		os.Exit(1)
 	}
 	maxRange := decimal.NewFromFloat(math.Pow10(9))
